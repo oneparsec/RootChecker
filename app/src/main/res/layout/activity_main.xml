@@ -7,23 +7,23 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/statusT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Root Access: Not checked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338" />
+        android:id="@+id/text1"
+        android:layout_width="84dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="62dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Root Access:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/checkB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="82dp"
         android:layout_marginEnd="109dp"
         android:layout_marginBottom="290dp"
         android:text="Check Root Access"
@@ -33,13 +33,39 @@
         app:layout_constraintTop_toBottomOf="@+id/statusT" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/footerT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="55dp"
-        android:text="Root Checker by OneParsec"
+        android:text="Root Checker by OneParsec. Version 2."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/closeB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="213dp"
+        android:text="Close"
+        app:layout_constraintBottom_toTopOf="@+id/footerT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkB"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/statusT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:text="Not Checked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
