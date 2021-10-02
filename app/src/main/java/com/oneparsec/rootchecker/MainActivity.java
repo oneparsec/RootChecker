@@ -2,12 +2,14 @@ package com.oneparsec.rootchecker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.io.File;
 
 
@@ -33,8 +35,16 @@ public class MainActivity extends AppCompatActivity {
         Button checkButton = (Button) findViewById(R.id.checkB);
         Button closeButton = (Button) findViewById(R.id.closeB);
         TextView footer = (TextView) findViewById(R.id.footerT);
+        FloatingActionButton githubF = (FloatingActionButton) findViewById(R.id.githubF);
 
         footer.setText("Root Checker by OneParsec. Version: " + version + ".");
+
+        githubF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uriUrl = Uri.parse("http://github.com/OneParsec/RootChecker"); Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl); startActivity(launchBrowser);
+            }
+        });
 
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
